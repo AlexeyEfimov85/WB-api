@@ -20,7 +20,7 @@ let listIds: string[] = []
 if (process.env.LIST_ID) {
   listIds = JSON.parse(process.env.LIST_ID)
 }
-setInterval(getWBDataByHour, 60000, (listIds));
+setInterval(getWBDataByHour, 3600000, (listIds));
 
 app.listen(PORT, () => {
   console.log(`App listening on port ${PORT}`)
